@@ -1,4 +1,4 @@
-# OpenVPN for Docker
+# Reloaded OpenVPN for Docker
 
 ## Motivation
 This is a fork from the amazing [kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn) repo.
