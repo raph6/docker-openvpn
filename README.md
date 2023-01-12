@@ -12,11 +12,11 @@ You can now use this to pull the image:
 ## Easy Usage
 This using Cloudflare DNS servers : `1.1.1.1` and `1.0.0.1`, you can change it if you want
 
-Dont forget to replace `/path/to/ovpn-data` and `CLIENTNAME` with your own values
+Dont forget to replace `/path/to/ovpn-data`, `YOUR-IP` and `CLIENTNAME` with your own values
 
 Generate configuration:
 ```sh
-docker run -v /path/to/ovpn-data:/etc/openvpn --net=none --rm raph6/openvpn ovpn_genconfig -n '1.1.1.1' -n '1.0.0.1' -C 'AES-256-CBC' -a 'SHA512' -u udp://51.83.42.97:1195
+docker run -v /path/to/ovpn-data:/etc/openvpn --net=none --rm raph6/openvpn ovpn_genconfig -n '1.1.1.1' -n '1.0.0.1' -C 'AES-256-CBC' -a 'SHA512' -u udp://YOUR-IP:1195
 ```
 
 Generate certificates:
@@ -27,7 +27,7 @@ docker run -e EASYRSA_KEY_SIZE=4096 -v /path/to/ovpn-data:/etc/openvpn --rm -it 
 Start OpenVPN server:
 ```sh
 docker run -v /path/to/ovpn-data:/etc/openvpn -d -p 1195:1194/udp --cap-add=NET_ADMIN --restart=always --name=openvpn-cloudflare raph6/openvpn
-```
+```1.83.42.97
 
 Generate a client certificate:
 ```sh
