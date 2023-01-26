@@ -27,7 +27,7 @@ docker run -e EASYRSA_KEY_SIZE=4096 -v /path/to/ovpn-data:/etc/openvpn --rm -it 
 Start OpenVPN server:
 ```sh
 docker run -v /path/to/ovpn-data:/etc/openvpn -d -p 1195:1194/udp --cap-add=NET_ADMIN --restart=always --name=openvpn-cloudflare raph6/openvpn
-```1.83.42.97
+```
 
 Generate a client certificate:
 ```sh
